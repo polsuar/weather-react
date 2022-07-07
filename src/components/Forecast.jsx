@@ -1,4 +1,5 @@
 import React from 'react'
+import { iconUrlFromCode } from '../services/weatherService'
 
 function Forecast({ title, items }) {
 	return (
@@ -10,12 +11,12 @@ function Forecast({ title, items }) {
 			<hr className='my-2' />
 
 			<div className='flex flex-row items-center justify-between text-white'>
-				{items.map((item) => (
+				{items.map((item, id) => (
 
-					<div className='flex flex-col items-center justify-center'>
+					<div key={id}className='flex flex-col items-center justify-center'>
 						<p className="font-light text-sm">{item.title}</p>
-						<img src={item.icon} alt="" className='w-12 my-1' />
-						<p className='font-medium text-sm'>{ `${item.temp.toFixed()} °`}</p>
+						<img src={iconUrlFromCode(item.icon)}  alt="" className='w-12 my-1' />
+						<p className='font-medium text-sm'>{ `${item.temp.toFixed()}°`}</p>
 					</div>
 				))}
 

@@ -20,18 +20,18 @@ function TemperatureAndDetails({weather:{details,icon,temp,temp_min,temp_max,sun
 			<div className="flex flex-row items-center justify-between text-white py-3">
 				<img src={iconUrlFromCode(icon)} alt="weather icon" className='w-20' />
 
-				<p className='text-5xl'>{`${temp.toFixed()} °`}</p>
+				<p className='text-5xl'>{`${temp.toFixed()}°`}</p>
 
 				<div className="flex flex-col space-y-2">
 					<div className='flex font-light text-sm items-center justify-center'>
 						<UilTemperature size={18} className="mr-1"/>
 						Real feel:
-						<span className="font-medium ml-1">{`${feels_like.toFixed()} °`}</span>
+						<span className="font-medium ml-1">{`${feels_like.toFixed()}°`}</span>
 					</div>
 					<div className='flex font-light text-sm items-center justify-center'>
 						<UilTear size={18} className="mr-1"/>
 						Humidity:
-						<span className="font-medium ml-1">{`${humidity.toFixed()} %`}</span>
+						<span className="font-medium ml-1">{`${humidity.toFixed()}%`}</span>
 					</div>
 					<div className='flex font-light text-sm items-center justify-center'>
 						<UilWind size={18} className="mr-1"/>
@@ -57,13 +57,13 @@ function TemperatureAndDetails({weather:{details,icon,temp,temp_min,temp_max,sun
 
 			<UilArrowUp/>
 			<p className="font-light">
-				High: <span className="font-medium ml-1">{`${temp_max.toFixed()} °`}</span>
+				High: <span className="font-medium ml-1">{`${temp_max.toFixed()}°`}</span>
 			</p>
 			<p className="font-light">|</p>
 
 			<UilArrowDown/>
 			<p className="font-light">
-				Low: <span className="font-medium ml-1">{`${temp_min.toFixed()} °`}</span>
+				Low: <span className="font-medium ml-1">{`${temp_min.toFixed()}°`}</span>
 			</p>
 		</div>
 
