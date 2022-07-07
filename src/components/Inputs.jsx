@@ -32,6 +32,7 @@ function Inputs({setQuery, units, setUnits}) {
 				<input
 				value={city}
 				onChange={(e) => setCity(e.currentTarget.value)}
+				onKeyUp={(e) => e.key === 'Enter' && handleSearchClick()}
 				type="text"
 				placeholder="Search for a city..."
 				className="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder:lowercase"
